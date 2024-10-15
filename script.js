@@ -11,14 +11,20 @@ async function generateVoice() {
     }
 
     try {
-        const response = await fetch('/generate-speech', {
+        const response = await fetch(`https://api.elevenlabs.io/v1/text-to-speech/${voiceId}`, {
             method: 'POST',
             headers: {
+                'Accept': 'audio/mpeg',
                 'Content-Type': 'application/json',
+                'xi-api-key': apiKey
             },
             body: JSON.stringify({
                 text: inputText,
-                voiceId: voiceId
+                model_id: 'eleven_monolingual_v1',
+                voice_settings: {
+                    stability: 0.5,
+                    similarity_boost: 0.5
+                }
             })
         });
 
@@ -35,6 +41,6 @@ async function generateVoice() {
         }
     } catch (error) {
         console.error('Fetch error:', error);
-        alert('Error connecting to the server. Check console for details.');
+        alert('Error connecting to the API. Check console for details.');
     }
 }
