@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Text-to-Speech</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>AI Text-to-Speech</h1>
+        <div class="input-container">
+            <textarea id="input-text" placeholder="Enter text to convert to speech"></textarea>
+            <select id="voice-select">
+                <option value="21m00Tcm4TlvDq8ikWAM">Rachel</option>
+                <option value="AZnzlk1XvdvUeBnXmlld">Domi</option>
+                <option value="EXAVITQu4vr4xnSDxMaL">Bella</option>
+                <option value="ErXwobaYiN019PkySvjV">Antoni</option>
+                <option value="MF3mGyEYCl7XYWbV9V6O">Elli</option>
+                <!-- Add more voice options as needed -->
+            </select>
+            <button id="generate-btn">Generate Voice</button>
+        </div>
+        <audio id="audio-player" controls style="display: none;"></audio>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
