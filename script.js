@@ -5,7 +5,7 @@ document.getElementById('generate-btn').addEventListener('click', generateVoice)
 async function generateVoice() {
     const inputText = document.getElementById('input-text').value;
     const selectedVoice = document.getElementById('voice-select').value;
-
+    
     if (!inputText) {
         alert('Please enter some text.');
         return;

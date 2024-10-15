@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
 app.use(cors());
-app.use(express.static('.')); // Serve static files from the current directory
+app.use(express.static('public')); // Serve static files from the public directory
 
 app.post('/generate-speech', async (req, res) => {
     try {
